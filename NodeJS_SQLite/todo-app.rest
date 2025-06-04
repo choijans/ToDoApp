@@ -1,0 +1,42 @@
+##CLIENT EMULATION
+### GET
+GET http://localhost:5000
+
+### POST (REGISTER)
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "jans1234",
+    "password": "jans1234"
+}
+### POST (LOGIN)
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "jans1234",
+    "password": "jans1234"
+}
+### FETCH TODOS
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ5MDE1NDA2LCJleHAiOjE3NDkxMDE4MDZ9.VMwzN3lMWdB9dTwA0k8TKZXnhcfW5hQCgAgM7JDvcZ0
+### CREATE NEW TODO
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ5MDE1NDA2LCJleHAiOjE3NDkxMDE4MDZ9.VMwzN3lMWdB9dTwA0k8TKZXnhcfW5hQCgAgM7JDvcZ0
+Content-Type: application/json
+
+{
+    "task": "Finish Project"
+}
+### UPDATE TODO
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ5MDE1NDA2LCJleHAiOjE3NDkxMDE4MDZ9.VMwzN3lMWdB9dTwA0k8TKZXnhcfW5hQCgAgM7JDvcZ0
+Content-Type: application/json
+
+{
+    "completed": "1"
+}
+### DELETE TODO
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ5MDE1NDA2LCJleHAiOjE3NDkxMDE4MDZ9.VMwzN3lMWdB9dTwA0k8TKZXnhcfW5hQCgAgM7JDvcZ0
